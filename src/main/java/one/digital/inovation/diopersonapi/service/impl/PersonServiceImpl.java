@@ -23,14 +23,14 @@ public class PersonServiceImpl implements PersonService {
     public MessageResponseDTO createPerson(PersonDTO dto) {
         Person entity = this.mapper.dto2Entity(dto);
         entity = this.repository.save(entity);
-        return this.createMessageResponse("Create person with ID ", entity.getId());
+        return this.createMessageResponse("Create person with ID: ", entity.getId());
     }
 
     public MessageResponseDTO updateById(Long id, PersonDTO dto) throws PersonNotFoundException {
         this.findByIdIfExists(id);
         Person entity = this.mapper.dto2Entity(dto);
         this.repository.save(entity);
-        return this.createMessageResponse("Update person with ID ", entity.getId());
+        return this.createMessageResponse("Update person with ID: ", entity.getId());
     }
 
     public List<PersonDTO> listAll() {

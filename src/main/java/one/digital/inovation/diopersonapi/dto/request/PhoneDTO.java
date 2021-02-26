@@ -1,5 +1,7 @@
 package one.digital.inovation.diopersonapi.dto.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import one.digital.inovation.diopersonapi.enums.PhoneType;
@@ -10,7 +12,9 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Data
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class PhoneDTO {
     private Long id;
 
