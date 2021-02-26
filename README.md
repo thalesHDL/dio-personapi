@@ -22,6 +22,12 @@ Após executar o comando acima, basta apenas abrir o seguinte endereço e visual
 http://localhost:8080/api/v1/person
 ````
 
+Para executar os testes unitários:
+
+````
+mvnw clean test
+````
+
 Para testar a api, use o swagger:
 
 ````
